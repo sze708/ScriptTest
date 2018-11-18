@@ -26,7 +26,7 @@ public class Boss
     //魔法攻撃の関数
     public void Magic(int mpconsumption)
     {
-        //mp5以上の場合は魔法攻撃をしてmp消費、それ以外の場合は魔法が使えない
+        //mp5以上の場合は魔法攻撃をしてmp消費、MPが足りない場合は魔法が使えない
         if (mp >= 5)
         {
             this.mp -= mpconsumption;
