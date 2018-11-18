@@ -26,9 +26,10 @@ public class Boss
     //魔法攻撃の関数
     public void Magic(int mpconsumption)
     {
-        this.mp -= mpconsumption;
-        if (mp > 0)
+        //mp5以上の場合は魔法攻撃をしてmp消費、それ以外の場合は魔法が使えない
+        if (mp >= 5)
         {
+            this.mp -= mpconsumption;
             Debug.Log("魔法攻撃をした。残りMPは" + this.mp);
         }
         else
@@ -53,7 +54,7 @@ public class AdvancedTest : MonoBehaviour
         lastboss.Defence(3);
         //魔法用攻撃用の関数を11回呼び出す
         int turn;
-        for (int i = 0; i <11; i++)
+        for (int i = 0; i <12; i++)
         {
             turn = i + 1;
             Debug.Log( "＜"+turn+"ターン目＞");

@@ -18,7 +18,7 @@ public class Test : MonoBehaviour {
         points[4] = 5;
 
         //配列要素を昇順で表示
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i <points.Length; i++)
         {
             Debug.Log(points[i]);
         }
